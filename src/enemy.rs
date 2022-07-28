@@ -9,10 +9,14 @@ use crate::{
 #[derive(Component)]
 pub struct Enemy;
 
+#[derive(Component)]
+pub struct SpawnLocationX(pub f32);
+
 #[derive(Bundle)]
 pub struct EnemyBundle {
     enemy: Enemy,
     facing: Facing,
+    spawn_location_x: SpawnLocationX,
     #[bundle]
     transform_bundle: TransformBundle,
     fighter_handle: Handle<FighterMeta>,
@@ -31,6 +35,7 @@ impl EnemyBundle {
         EnemyBundle {
             enemy: Enemy,
             facing: Facing::Left,
+            spawn_location_x: SpawnLocationX(enemy_pos.x),
             transform_bundle,
             fighter_handle,
         }
