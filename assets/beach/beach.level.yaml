@@ -62,6 +62,10 @@ enemies:
     location: [400, -30, 0]
   - fighter: *brute
     location: [450, 20, 0]
+  - fighter: *brute
+    location: [1000, 20, 0]
+
+stop_points: [500, 1000]
 
 items:
   - item: &bottle /items/bottle/bottle.item.yaml
