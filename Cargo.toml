@@ -42,6 +42,9 @@ directories = "4.0.1"
 async-channel = "1.6.1"
 deno_core = "0.144.0"
 deno_ast = { version = "0.17.0", features = ["transpiling"] }
+async-lock = "2.5.0"
+dashmap = "5.3.4"
+cismute = "0.1.2"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 web-sys = { version = "0.3", features = ["Window","Location","Storage"] }
@@ -55,8 +58,6 @@ schedule_graph = ["bevy_mod_debugdump"]
 [profile.dev.package."*"]
 opt-level = 3
 debug = false
-
-[profile.dev]
 # As of Jul/2022, opt-level=1 takes a considerable compilation time; with such configuration,
 # profiling a (incremental) build showed that the large part of the time is spent in optimization
 # passes.

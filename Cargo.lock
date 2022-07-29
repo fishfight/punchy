@@ -198,6 +198,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "async-lock"
+version = "2.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e97a171d191782fba31bb902b14ad94e24a68145032b7eedf871ab0bc0d077b6"
+dependencies = [
+ "event-listener",
+]
+
+[[package]]
 name = "async-task"
 version = "4.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1125,6 +1134,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fd16c4719339c4530435d38e511904438d07cce7950afa3718a84ac36c10e89e"
 
 [[package]]
+name = "cismute"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2110cc57f7b179a25d5c03572fde3e974cde850fa20baeffc9b8a8405608eaca"
+
+[[package]]
 name = "clang-sys"
 version = "1.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1846,9 +1861,9 @@ dependencies = [
 
 [[package]]
 name = "event-listener"
-version = "2.5.2"
+version = "2.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77f3309417938f28bf8228fcff79a4a37103981e3e186d2ccd19c74b38f4eb71"
+checksum = "0206175f82b8d6bf6652ff7d71a1e27fd2e4efde587fd368662814d6ec1d9ce0"
 
 [[package]]
 name = "fastrand"
@@ -3651,6 +3666,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "async-channel",
+ "async-lock",
  "bevy",
  "bevy-inspector-egui",
  "bevy-inspector-egui-rapier",
@@ -3660,6 +3676,8 @@ dependencies = [
  "bevy_kira_audio",
  "bevy_mod_debugdump",
  "bevy_rapier2d",
+ "cismute",
+ "dashmap",
  "deno_ast",
  "deno_core",
  "directories",
