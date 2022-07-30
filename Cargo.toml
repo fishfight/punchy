@@ -40,6 +40,13 @@ sys-locale = "0.2.1"
 fluent = "0.16.0"
 directories = "4.0.1"
 async-channel = "1.6.1"
+deno_ast = { version = "0.17.0", features = ["transpiling"] }
+cismute = "0.1.2"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+deno_core = "0.145.0"
+async-lock = "2.5.0"
+dashmap = "5.3.4"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 web-sys = { version = "0.3", features = ["Window","Location","Storage"] }
@@ -53,8 +60,6 @@ schedule_graph = ["bevy_mod_debugdump"]
 [profile.dev.package."*"]
 opt-level = 3
 debug = false
-
-[profile.dev]
 # As of Jul/2022, opt-level=1 takes a considerable compilation time; with such configuration,
 # profiling a (incremental) build showed that the large part of the time is spent in optimization
 # passes.
@@ -71,3 +76,6 @@ codegen-units = 1 # Improves physics performance for release builds
 # Patch to enable improved DPad support. It's a merge of the following PR to Bevy 0.7.0 so we can
 # use it before 0.8 is release: https://github.com/bevyengine/bevy/pull/5220.
 bevy_gilrs = { git = "https://github.com/zicklag/bevy.git", branch = "v0.7.0-dpad-patch" }
+# Patch Bevy asset to avoid a conflict with the version of the `notify` crate it uses and the
+# version that the `deno_runtime` uses.
+bevy_asset = { git = "https://github.com/zicklag/bevy.git", branch = "v0.7.0-notify-version-patch" }

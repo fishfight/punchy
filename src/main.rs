@@ -39,6 +39,7 @@ mod metadata;
 mod movement;
 mod platform;
 mod player;
+mod scripting;
 mod state;
 mod ui;
 mod utils;
@@ -57,7 +58,9 @@ use ui::UIPlugin;
 use utils::ResetController;
 use y_sort::*;
 
-use crate::{config::EngineConfig, input::PlayerAction, item::pick_items};
+use crate::{
+    config::EngineConfig, input::PlayerAction, item::pick_items, scripting::ScriptingPlugin,
+};
 
 #[cfg_attr(feature = "debug", derive(bevy_inspector_egui::Inspectable))]
 #[derive(Component, Deserialize, Clone, Debug)]
@@ -201,6 +204,7 @@ fn main() {
         .add_plugin(StatePlugin)
         .add_plugin(ParallaxPlugin)
         .add_plugin(UIPlugin)
+        .add_plugin(ScriptingPlugin)
         .add_audio_channel::<MusicChannel>()
         .add_audio_channel::<EffectsChannel>()
         .insert_resource(ParallaxResource::default())
