@@ -160,9 +160,9 @@ dependencies = [
 
 [[package]]
 name = "ast_node"
-version = "0.8.1"
+version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "87549fcb780f81054407f313a1693d102396c223f5c49ccc5d90b46a6cbef34a"
+checksum = "1a36288803cd1605bc4f0e3189970a0db8e602bb01a39f8133889f35ece7ddde"
 dependencies = [
  "darling",
  "pmutil",
@@ -1235,9 +1235,9 @@ dependencies = [
 
 [[package]]
 name = "concurrent-queue"
-version = "1.2.2"
+version = "1.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30ed07550be01594c6026cff2a1d7fe9c8f683caa798e12b68694ac9e88286a3"
+checksum = "af4780a44ab5696ea9e28294517f1fffb421a83a25af521333c838635509db9c"
 dependencies = [
  "cache-padded",
 ]
@@ -1638,9 +1638,9 @@ dependencies = [
 
 [[package]]
 name = "deno_core"
-version = "0.144.0"
+version = "0.145.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "07952bcb705366ce6cf1590cb408157761ae492d135625beab23572bd2a51938"
+checksum = "c56dbbb729d840e253fc92663e76e72971469110cded91a97e046eee5b9ffef6"
 dependencies = [
  "anyhow",
  "deno_ops",
@@ -1661,9 +1661,9 @@ dependencies = [
 
 [[package]]
 name = "deno_ops"
-version = "0.22.0"
+version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "871f1028045a23864859a71cf901867f839dabc26ba20db7cf6cc7e854015a80"
+checksum = "dc5440716bfe35e3d184666de9d53450399156e9b5d793722d8f923c5bae364d"
 dependencies = [
  "once_cell",
  "proc-macro-crate",
@@ -3348,9 +3348,9 @@ checksum = "978aa494585d3ca4ad74929863093e87cac9790d81fe7aba2b3dc2890643a0fc"
 
 [[package]]
 name = "owned_ttf_parser"
-version = "0.15.0"
+version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4fb1e509cfe7a12db2a90bfa057dfcdbc55a347f5da677c506b53dd099cfec9d"
+checksum = "07ef1a404ae479dd6906f4fa2c88b3c94028f1284beb42a47c183a7c27ee9a3e"
 dependencies = [
  "ttf-parser",
 ]
@@ -3794,9 +3794,9 @@ checksum = "a0d463f2884048e7153449a55166f91028d5b0ea53c79377099ce4e8cf0cf9bb"
 
 [[package]]
 name = "redox_syscall"
-version = "0.2.15"
+version = "0.2.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "534cfe58d6a18cc17120fbf4635d53d14691c1fe4d951064df9bd326178d7d5a"
+checksum = "fb5a58c1855b4b6819d59012155603f0b22ad30cad752600aadfcb695265519a"
 dependencies = [
  "bitflags",
 ]
@@ -3994,6 +3994,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_bytes"
+version = "0.11.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "212e73464ebcde48d723aa02eb270ba62eff38a9b732df31f33f1b4e145f3a54"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "serde_derive"
 version = "1.0.140"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4018,13 +4027,14 @@ dependencies = [
 
 [[package]]
 name = "serde_v8"
-version = "0.55.0"
+version = "0.56.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69110d2be1d34271c4a7ceb4171c6c12f2aafe6b8d4eb46c8d0a7e8d039154e4"
+checksum = "4d8960b6ab57ab11cd48dd93dd95618193040da453d3757925d3d8bbd6d19baa"
 dependencies = [
  "bytes",
  "derive_more",
  "serde",
+ "serde_bytes",
  "smallvec",
  "v8",
 ]
@@ -4874,9 +4884,9 @@ dependencies = [
 
 [[package]]
 name = "tracing"
-version = "0.1.35"
+version = "0.1.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a400e31aa60b9d44a52a8ee0343b5b18566b03a8321e0d321f695cf56e940160"
+checksum = "2fce9567bd60a67d08a16488756721ba392f24f29006402881e43b19aac64307"
 dependencies = [
  "cfg-if 1.0.0",
  "pin-project-lite",
@@ -4897,9 +4907,9 @@ dependencies = [
 
 [[package]]
 name = "tracing-core"
-version = "0.1.28"
+version = "0.1.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b7358be39f2f274f322d2aaed611acc57f382e8eb1e5b48cb9ae30933495ce7"
+checksum = "5aeea4303076558a00714b823f9ad67d58a3bbda1df83d8827d21193156e22f7"
 dependencies = [
  "once_cell",
  "valuable",
@@ -5081,9 +5091,9 @@ dependencies = [
 
 [[package]]
 name = "v8"
-version = "0.47.0"
+version = "0.47.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8bfba6cf63e2f839461fc45c75be2d0d803164123c50646c0dc6b2ef193b00a1"
+checksum = "be156dece7a023d5959a72dc0d398d6c95100ec601a2cea10d868da143e85166"
 dependencies = [
  "bitflags",
  "fslock",

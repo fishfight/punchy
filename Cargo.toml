@@ -40,11 +40,13 @@ sys-locale = "0.2.1"
 fluent = "0.16.0"
 directories = "4.0.1"
 async-channel = "1.6.1"
-deno_core = "0.144.0"
 deno_ast = { version = "0.17.0", features = ["transpiling"] }
+cismute = "0.1.2"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+deno_core = "0.145.0"
 async-lock = "2.5.0"
 dashmap = "5.3.4"
-cismute = "0.1.2"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 web-sys = { version = "0.3", features = ["Window","Location","Storage"] }
